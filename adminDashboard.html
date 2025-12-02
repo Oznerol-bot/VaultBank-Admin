@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault Bank - Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="adminDashboard.css">
+</head>
+<body>
+
+  <aside>
+    <div class="logo-header">
+      <img src="images/Logo.png" alt="Vault Bank">
+      <p>Admin Portal</p>
+    </div>
+    <nav>
+      <a href="adminDashboard.html" class="active"><i class="fas fa-users-cog"></i><span>Pending Users</span></a>
+      <a href="#" id="logoutLink"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="top-bar">
+      <h2>Pending User Approvals</h2>
+      <div class="user-profile">
+        <img src="" alt="Admin">
+        <span>Administrator</span>
+      </div>
+    </div>
+
+    <div class="card full-width">
+      <div class="table-header">
+        <h3>Users Awaiting Approval</h3>
+        <button class="btn-refresh" onclick="fetchPendingUsers()">
+          <i class="fas fa-sync-alt"></i> Refresh
+        </button>
+      </div>
+
+      <div id="messageArea" class="alert" style="display:none; margin: 15px 0;"></div>
+
+      <div class="table-responsive">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Username</th>
+              <th>Contact</th>
+              <th>Registered On</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="pendingUsersList">
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  
+  <script src="adminScript.js"></script>
+  </body>
+</html>
