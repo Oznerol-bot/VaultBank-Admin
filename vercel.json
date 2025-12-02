@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/adminRegister.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/adminRegister.html"
+    }
+  ]
+}
